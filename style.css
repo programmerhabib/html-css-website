@@ -1,0 +1,451 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-size: 30px;
+}
+p{
+    font-size: 18px;
+}
+.hr-dotted{
+    border: 4px dotted #ffffff;
+    border-bottom: none;
+    width: 75px;
+}
+header{
+    background-color: #080C21;
+    padding: 12px;
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+header nav .logo{
+   width: 20%;
+}
+header nav .website-title{
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+}
+header nav .menu{
+    width: 30%;
+    text-align: right;
+}
+header nav .menu ul{
+
+}
+header nav .menu ul li{
+    list-style-type: none;
+    display: inline;
+    padding:12px;
+    
+}
+header nav .menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+        
+}
+header nav .menu ul li a:hover{
+    color: tomato;
+}
+.profile{
+    padding: 12px;
+}
+.profile .top-cloudy-icon{
+    position: relative;
+    margin-bottom: 0 0 50px 0;
+}
+.profile .top-cloudy-icon img{
+    width: 125px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    transition: transform 2s;
+}
+.profile .top-cloudy-icon img:hover{
+    transform: rotate(360deg);
+}
+
+.profile .bottom-cloudy-icon{
+    position: relative;
+    margin-bottom: 200px;
+}
+.profile .bottom-cloudy-icon img{
+    width: 125px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding-bottom: 25px;
+    transition: transform 2s;
+}
+.profile .bottom-cloudy-icon img:hover{
+    transform: rotate(360deg);
+}
+.profile .profile-description{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 150px;
+
+}
+.profile .profile-description h1{
+    font-family: 'Satisfy', cursive;;
+    font-size: 42px;
+}
+.profile .profile-description p{
+    font-size: 18px;
+}
+.profile::after{
+    content: '';
+    clear: both;
+}
+.about-me{
+    background-color: tomato;
+    padding: 50px 12px;
+    text-align: center;
+}
+.about-me-body{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+}
+.about-me-body .about-img{
+    width: 50%;
+}
+.about-me-body .about-img img{
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 5px 3px 8px #ffffff;
+}
+.about-me-body .about-description{
+    width: 50%;
+    text-align: left;
+}
+.about-me-body .about-description p{
+    text-align: left;
+    margin-bottom: 30px;
+}
+.about-me-body .about-description a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #080C21;
+    padding: 10px 14px;
+    border-radius: 12px;
+}
+.about-me-body .about-description a:hover{
+    transition: 1s;
+    background-color: #080C21;
+    color: #ffffff;
+}
+.profesional-experience{
+    display: flex;
+    width: 100%;
+    padding: 50px 12px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.card{
+    background-color: gray;
+    padding: 10px;
+    margin: 14px;
+    border-radius: 12px;
+    height: 700px;
+}
+.card:hover{
+    box-shadow: 3px 3px 5px #000;
+}
+.card-icon{
+    text-align: center;
+    margin: 15px 0;
+}
+.card-icon img{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 12px;
+}
+.card-title{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2px;
+}
+.work-experience{
+    width: 30%;
+}
+.education-experience{
+    width: 30%;
+}
+.pro-skills{
+    width: 30%;
+}
+.pro-skills .card .card-description li{
+    list-style-type: none;
+    margin: 45px 0;
+    font-size: 18px;
+    position: relative;
+}
+.pro-skills .card .card-description li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    height: 10px;
+    background-color: tomato;
+}
+.pro-skills .card .card-description li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 0%;
+    height: 10px;
+    background-color: blue;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.pro-skills .card .card-description li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 95%;
+    }
+}
+.pro-skills .card .card-description li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 85%;
+    }
+}
+.pro-skills .card .card-description li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 70%;
+    }
+}
+.pro-skills .card .card-description li.photoshop::after{
+    animation-name: photoshop;
+}
+@keyframes photoshop{
+    to{
+        width: 60%;
+    }
+}
+.contact{
+    width: 100%;
+    background-color: aqua;
+    padding: 50px 12px;
+    display: flex;
+    justify-content: center;
+}
+.achievement{
+    width: 30%;
+    text-align: center;
+}
+.achievement li{
+    list-style-type: none;
+    padding: 12px 15px;
+    font-size: 18px;
+}
+.contact-form{
+    width: 40%;
+    text-align: center;
+}
+.contact-form #contact-inner{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    text-align: center;
+}
+.contact-form #contact-inner form input[type=text],input[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+}
+.contact-form #contact-inner form textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 19px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+}
+.contact-form #contact-inner form input[type=submit]{
+    width: 30%;
+    padding: 20px 15px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    background-color: tomato;
+    cursor: pointer;
+}
+.social-link{
+    width: 30%;
+    text-align: center;
+}
+.social-link ul li{
+    list-style-type: none;
+    display: inline;
+    font-size: 30px;
+    margin: 8px;
+}
+#back-top{
+    position: relative;
+}
+#back-top a{
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+}
+footer{
+    background-color: #000;
+    padding: 12px;
+    text-align: center;
+    display: flex;
+    width: 100%;
+}
+footer .footer-menu{
+    width: 50%;
+}
+footer .footer-menu ul li{
+    list-style-type: none;
+    display: inline;
+    margin: 0 10px;
+}
+footer .footer-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+footer .copyright-section{
+    width: 50%;
+} 
+footer .copyright-section p{
+    text-align: center;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+/* Responsive for mobile and tablet */
+@media screen and (max-width: 1024px){
+    header nav .website-title{
+        font-size: 18px;
+        text-align: right;
+    }
+    header nav .menu{
+        text-align: right;
+    }
+    header nav .menu ul li a{
+        font-size: 18px;
+            
+    }
+    .about-me-body{
+        flex-direction: column;
+    }
+    .about-me-body .about-img{
+        width: 100%;
+    }
+    .about-me-body .about-description{
+        width: 100%;
+        text-align: center;
+    }
+    .about-me-body .about-description p{
+        text-align: center;
+    }
+    .profesional-experience{
+        flex-direction: column;
+    }
+    .work-experience,.education-experience,.pro-skills{
+        width: 90%;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .achievement, .contact-form, .social-link{
+        width: 100%;
+    }
+    #back-top a{
+        right: 10px;
+        bottom: 100px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer .footer-menu, footer .copyright-section{
+        width: 100%;
+    }
+    footer .footer-menu ul{
+        padding: 0;
+    }
+    
+
+}
+@media screen and (max-width: 650px){
+    header nav{
+        flex-direction: column;
+    }
+    header nav .logo{
+        width: 100%;
+        text-align: center;
+    }
+    header nav .website-title{
+        width: 100%;
+        text-align: center;
+    }
+    header nav .menu{
+        width: 100%;
+        text-align: center;
+    }
+    header nav .menu ul li{
+        display: block;
+        margin: 12px;
+    }
+    header nav .menu ul li a{
+        background-color: tomato;
+        padding: 12px 30%;
+        border-radius: 10px;
+    }
+    header nav .menu ul li a:hover{
+        color: #fff;
+    }
+    .profile .profile-description{
+        width: 90%;
+        margin-top: 180px;
+    
+    }
+}
